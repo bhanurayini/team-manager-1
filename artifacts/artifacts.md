@@ -1,5 +1,5 @@
 # Accompanying Documentation for Team Manager ERD
-### Bhanu Rayini, Alexander Roessner, Krithika Saravanan, ...
+### Bhanu Rayini, Alexander Roessner, Krithika Saravanan, Karthick Krishnamurthy
 
 ##Organization (organization)
 Organization (or Club) for Entire League
