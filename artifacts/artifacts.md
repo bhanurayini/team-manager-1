@@ -42,7 +42,9 @@ Different roles one can have in the database - one might hold multiple roles.
 ##Person Evaluation (person_evaluation)
 Small database to hold evaluations of a player. Currently limited to a body (memo) of the evaluation and a date/time of said evaluation.
 * idperson_evaluation - ID of evaluation
-* evaluation_body - Content of evaluation
+* evaluation_memo - Content of evaluation
+* evaluation_height - Height of individual at time of evaluation.
+* evaluation_weight - Weight of individual at time of evaluation.
 * evaluation_date - Date of evaluation
 * person_idperson - FK Persion ID
 
