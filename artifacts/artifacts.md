@@ -54,6 +54,7 @@ Person/User of this database.
 * dob - Date of birth.
 * gender - Gender
 * ethn - Ethnicity
+* email - Person's e-mail
 
 ##Scholarships (scholarships)
 Scholarships a person may hold.
