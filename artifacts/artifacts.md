@@ -23,7 +23,7 @@ List of a team's training sessions and date of session.
 * training_date - Date of training session.
 
 ##Person Roles (person_roles)
-Join table for a person and their potential roles in a team and organization.
+Join table for a person and their potential roles in a team and organization. Team roster can be pulled from this in SQL select statement.
 * roles_idroles - FK ID from Roles
 * person_idperson - FK ID from Person
 * organization_idorganization - FK ID from Organization
