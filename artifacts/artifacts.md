@@ -15,6 +15,7 @@ One of potentially many teams within an organization
 * loses - Number of loses for a team.
 * ties - Number of ties for a team.
 * organization_idorganization - FK for related organization
+* age_group - Team age group.
 
 ##Team Training Sessions (team_training_sessions)
 List of a team's training sessions and date of session.
@@ -58,6 +59,8 @@ Person/User of this database.
 * ethn - Ethnicity
 * email - Person's e-mail
 * parent_guardian_person_id - Possibly null, but a referenced Person ID to one's parent or legal guardian.
+* jersey_number - Jersey Number
+* bio - Biography
 
 ##Scholarships (scholarships)
 Scholarships a person may hold.
