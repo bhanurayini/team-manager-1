@@ -55,6 +55,7 @@ Person/User of this database.
 * gender - Gender
 * ethn - Ethnicity
 * email - Person's e-mail
+* parent_guardian_person_id - Possibly null, but a referenced Person ID to one's parent or legal guardian.
 
 ##Scholarships (scholarships)
 Scholarships a person may hold.
