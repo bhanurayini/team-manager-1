@@ -19,3 +19,13 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+artifacts/ERD_refined.mwb.bak
+
+artifacts/ERD.mwb.bak
+
+.DS_Store
+
+.DS_Store
+
+.DS_Store

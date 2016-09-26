@@ -1,0 +1,1 @@
+json.array! @team_has_coaches, partial: 'team_has_coaches/team_has_coach', as: :team_has_coach

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  license_num: MyString
+  license_exp: 2016-09-26
+  person: one
+
+two:
+  license_num: MyString
+  license_exp: 2016-09-26
+  person: two

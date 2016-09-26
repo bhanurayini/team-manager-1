@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  age_group: MyString
+  wins: 1
+  loses: 1
+  ties: 1
+  team_start: 2016-09-26
+  team_end: 2016-09-26
+  is_archived: false
+
+two:
+  team_name: MyString
+  age_group: MyString
+  wins: 1
+  loses: 1
+  ties: 1
+  team_start: 2016-09-26
+  team_end: 2016-09-26
+  is_archived: false

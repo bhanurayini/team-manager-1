@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fee_amt: MyString
+  paid_amt: MyString
+  created_on: 2016-09-26 08:55:29
+  paid_on: 2016-09-26 08:55:29
+  references: 
+
+two:
+  fee_amt: MyString
+  paid_amt: MyString
+  created_on: 2016-09-26 08:55:29
+  paid_on: 2016-09-26 08:55:29
+  references: 

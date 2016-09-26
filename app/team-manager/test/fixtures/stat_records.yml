@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  record_value: MyText
+  record_type: MyString
+  record_date: 2016-09-26 08:54:08
+  references: 
+
+two:
+  record_value: MyText
+  record_type: MyString
+  record_date: 2016-09-26 08:54:08
+  references: 

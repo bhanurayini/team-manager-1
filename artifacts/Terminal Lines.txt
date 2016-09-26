@@ -1,0 +1,128 @@
+=== Terminal/Command Line ===
+
+== Scaffolds ==
+rails g scaffold organization org_name
+
+rails g scaffold team team_name age_group wins:integer loses:integer ties:integer team_start:date team_end:date is_archived:boolean
+
+rails g scaffold person first_name last_name dob:date gender ethnicity
+
+rails g scaffold address addr1 addr2 city state country zip address_type
+
+rails g scaffold phone phone_number phone_type
+
+rails g scaffold parent person:references
+
+rails g scaffold child person:references
+
+rails g scaffold staff person:references
+
+rails g scaffold manager person:references
+
+rails g scaffold coach license_num license_exp:date person:references
+
+rails g scaffold team_has_coaches coach_type person:references team:references
+
+rails g scaffold event event_name event_type event_start_time:datetime event_end_time:datetime
+
+rails g scaffold player_stats jersey_number player_bio:text height:integer weight:integer person:references team:references
+
+rails g scaffold stat_record record_value:text record_type record_date:datetime references:player_stats
+
+rails g scaffold payment_type payment_type check_num cc_num acct_num routing_num
+
+rails g scaffold fees fee_amt paid_amt created_on:datetime paid_on:datetime references:payment_type
+
+== Migrations ==
+rails g migration CreateJoinTablePeoplePhones people phones
+rails g migration CreateJoinTablePeopleAddresses people addresses
+rails g migration CreateJoinTableParentsChildren parents children
+rails g migration CreateJoinTablePeopleFees people fees
+rails g migration CreateJoinTableManagersTeams managers teams
+rails g migration CreateJoinTablePeopleTeams people teams
+rails g migration CreateJoinTableStaffsOrganizations staffs organizations
+rails g migration CreateJoinTableEventsOrganizations events organizations
+rails g migration CreateJoinTableEventsTeams events teams
+rails g migration CreateJoinTableTeamsOrganizations teams organizations
+
+=== Application Records ===
+class Address < ApplicationRecord
+  has_and_belongs_to_many :people
+end
+
+class Child < ApplicationRecord
+  belongs_to :person
+  has_and_belongs_to_many :parent
+end
+
+class Coach < ApplicationRecord
+  belongs_to :person
+end
+
+class Event < ApplicationRecord
+  has_many :organization
+  has_many :team
+end
+
+class Fee < ApplicationRecord
+  belongs_to :person
+  has_one :payment_type
+end
+
+class Manager < ApplicationRecord
+  belongs_to :person
+  has_many :team
+end
+
+class Organization < ApplicationRecord
+  has_many :team
+  has_many :staff
+  has_many :event
+end
+
+class Parent < ApplicationRecord
+  belongs_to :person
+  has_many :child
+end
+
+class PaymentType < ApplicationRecord
+  belongs_to :fee
+end
+
+class Person < ApplicationRecord
+  has_many :phone
+  has_and_belongs_to_many :addresses
+  has_many :team
+  has_many :fee
+end
+
+class Phone < ApplicationRecord
+  belongs_to :person
+end
+
+class PlayerStat < ApplicationRecord
+  belongs_to :person
+  belongs_to :team
+  has_many :stat_record
+end
+
+class Staff < ApplicationRecord
+  belongs_to :person
+end
+
+class StatRecord < ApplicationRecord
+  belongs_to :player_stat
+end
+
+
+class TeamHasCoach < ApplicationRecord
+  belongs_to :person
+  belongs_to :team
+end
+
+class Team < ApplicationRecord
+  has_many :person
+  has_many :manager
+  has_many :event
+  belongs_to :organization
+end

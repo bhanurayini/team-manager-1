@@ -1,0 +1,37 @@
+<%= form_for(stat_record) do |f| %>
+  <% if stat_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stat_record.errors.count, "error") %> prohibited this stat_record from being saved:</h2>
+
+      <ul>
+      <% stat_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :record_value %>
+    <%= f.text_area :record_value %>
+  </div>
+
+  <div class="field">
+    <%= f.label :record_type %>
+    <%= f.text_field :record_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :record_date %>
+    <%= f.datetime_select :record_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :references %>
+    <%= f.text_field :references %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

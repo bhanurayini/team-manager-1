@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stat Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Record value</th>
+      <th>Record type</th>
+      <th>Record date</th>
+      <th>References</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stat_records.each do |stat_record| %>
+      <tr>
+        <td><%= stat_record.record_value %></td>
+        <td><%= stat_record.record_type %></td>
+        <td><%= stat_record.record_date %></td>
+        <td><%= stat_record.references %></td>
+        <td><%= link_to 'Show', stat_record %></td>
+        <td><%= link_to 'Edit', edit_stat_record_path(stat_record) %></td>
+        <td><%= link_to 'Destroy', stat_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stat Record', new_stat_record_path %>
