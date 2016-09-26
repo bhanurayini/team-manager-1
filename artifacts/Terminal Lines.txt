@@ -48,6 +48,13 @@ rails g migration CreateJoinTableTeamsOrganizations teams organizations
 === Application Records ===
 class Address < ApplicationRecord
   has_and_belongs_to_many :people
+  validates_presence_of :addr1
+  validates_presence_of :addr2
+  validates_presence_of :city
+  validates_presence_of :state
+  validates_presence_of :country
+  validates_presence_of :zip
+  validates_presence_of :address_type
 end
 
 class Child < ApplicationRecord
@@ -57,16 +64,24 @@ end
 
 class Coach < ApplicationRecord
   belongs_to :person
+  validates_presence_of :license_num
+  validates_presence_of :license_exp
 end
 
 class Event < ApplicationRecord
   has_many :organization
   has_many :team
+  validates_presence_of :event_name
+  validates_presence_of :event_type
+  validates_presence_of :event_start_time
+  validates_presence_of :event_end_time
 end
 
 class Fee < ApplicationRecord
   belongs_to :person
   has_one :payment_type
+  validates_presence_of :fee_amt
+  validates_presence_of :created_on
 end
 
 class Manager < ApplicationRecord
@@ -78,6 +93,7 @@ class Organization < ApplicationRecord
   has_many :team
   has_many :staff
   has_many :event
+  validates_presence_of :org_name
 end
 
 class Parent < ApplicationRecord
@@ -87,6 +103,7 @@ end
 
 class PaymentType < ApplicationRecord
   belongs_to :fee
+  validates_presence_of :payment_type
 end
 
 class Person < ApplicationRecord
@@ -94,16 +111,22 @@ class Person < ApplicationRecord
   has_and_belongs_to_many :addresses
   has_many :team
   has_many :fee
+  validates_presence_of :first_name
+  validates_presence_of :last_name
+  validates_presence_of :dob
+  validates_presence_of :gender
 end
 
 class Phone < ApplicationRecord
   belongs_to :person
+  validates_presence_of :phone_number
+  validates_presence_of :phone_type
 end
 
 class PlayerStat < ApplicationRecord
   belongs_to :person
   belongs_to :team
-  has_many :stat_record
+  has_many :stat_record, dependent: :destroy
 end
 
 class Staff < ApplicationRecord
@@ -114,10 +137,10 @@ class StatRecord < ApplicationRecord
   belongs_to :player_stat
 end
 
-
 class TeamHasCoach < ApplicationRecord
   belongs_to :person
   belongs_to :team
+  validates_presence_of :coach_type
 end
 
 class Team < ApplicationRecord
@@ -125,4 +148,7 @@ class Team < ApplicationRecord
   has_many :manager
   has_many :event
   belongs_to :organization
+  validates_presence_of :team_name
+  validates_presence_of :age_group
 end
+

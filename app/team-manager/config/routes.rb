@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :fees
   resources :payment_types
   resources :stat_records

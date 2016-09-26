@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :dob %>
-    <%= f.date_select :dob %>
+    <%= f.date_select :dob, :start_year => 1940, :end_year => Date.current.year %>
   </div>
 
   <div class="field">
