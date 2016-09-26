@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  payment_type: MyString
+  check_num: MyString
+  cc_num: MyString
+  acct_num: MyString
+  routing_num: MyString
+
+two:
+  payment_type: MyString
+  check_num: MyString
+  cc_num: MyString
+  acct_num: MyString
+  routing_num: MyString

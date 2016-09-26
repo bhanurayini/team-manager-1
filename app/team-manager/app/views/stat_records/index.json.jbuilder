@@ -1,0 +1,1 @@
+json.array! @stat_records, partial: 'stat_records/stat_record', as: :stat_record

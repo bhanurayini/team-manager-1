@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fee amt:</strong>
+  <%= @fee.fee_amt %>
+</p>
+
+<p>
+  <strong>Paid amt:</strong>
+  <%= @fee.paid_amt %>
+</p>
+
+<p>
+  <strong>Created on:</strong>
+  <%= @fee.created_on %>
+</p>
+
+<p>
+  <strong>Paid on:</strong>
+  <%= @fee.paid_on %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @fee.references %>
+</p>
+
+<%= link_to 'Edit', edit_fee_path(@fee) %> |
+<%= link_to 'Back', fees_path %>

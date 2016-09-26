@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach_type: MyString
+  person: one
+  team: one
+
+two:
+  coach_type: MyString
+  person: two
+  team: two

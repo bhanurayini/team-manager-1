@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jersey number:</strong>
+  <%= @player_stat.jersey_number %>
+</p>
+
+<p>
+  <strong>Player bio:</strong>
+  <%= @player_stat.player_bio %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @player_stat.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @player_stat.weight %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @player_stat.person %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @player_stat.team %>
+</p>
+
+<%= link_to 'Edit', edit_player_stat_path(@player_stat) %> |
+<%= link_to 'Back', player_stats_path %>

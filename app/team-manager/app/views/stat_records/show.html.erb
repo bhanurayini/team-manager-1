@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Record value:</strong>
+  <%= @stat_record.record_value %>
+</p>
+
+<p>
+  <strong>Record type:</strong>
+  <%= @stat_record.record_type %>
+</p>
+
+<p>
+  <strong>Record date:</strong>
+  <%= @stat_record.record_date %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @stat_record.references %>
+</p>
+
+<%= link_to 'Edit', edit_stat_record_path(@stat_record) %> |
+<%= link_to 'Back', stat_records_path %>

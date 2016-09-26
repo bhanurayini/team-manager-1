@@ -1,0 +1,1 @@
+json.partial! "stat_records/stat_record", stat_record: @stat_record
