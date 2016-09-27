@@ -33,6 +33,8 @@ rails g scaffold payment_type payment_type check_num cc_num acct_num routing_num
 
 rails g scaffold fees fee_amt paid_amt created_on:datetime paid_on:datetime references:payment_type
 
+rails g home index
+
 == Migrations ==
 rails g migration CreateJoinTablePeoplePhones people phones
 rails g migration CreateJoinTablePeopleAddresses people addresses
@@ -152,3 +154,24 @@ class Team < ApplicationRecord
   validates_presence_of :age_group
 end
 
+=== Routes ===
+Rails.application.routes.draw do
+  root 'home#index'
+  resources :fees
+  resources :payment_types
+  resources :stat_records
+  resources :player_stats
+  resources :events
+  resources :team_has_coaches
+  resources :coaches
+  resources :managers
+  resources :staffs
+  resources :children
+  resources :parents
+  resources :phones
+  resources :addresses
+  resources :people
+  resources :teams
+  resources :organizations
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
